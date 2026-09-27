@@ -524,8 +524,10 @@ insurance-policy-assessment/
 │       └── import.worker.js
 ├── .env.example
 ├── .gitignore
-├── eslint.config.js
+├── .prettierignore
 ├── .prettierrc
+├── eslint.config.js
+├── package-lock.json
 ├── package.json
 └── README.md
 ```
