@@ -1,0 +1,57 @@
+{
+  "name": "insurance-policy-assessment",
+  "version": "1.0.0",
+  "description": "Node.js, Express & MongoDB REST API for insurance policy management, asynchronous worker thread file imports, and scheduled notifications.",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "author": {
+    "name": "Sekh Hasim Ahmed",
+    "email": "hasim.cs@gmail.com"
+  },
+  "keywords": [
+    "insurance",
+    "policy-management",
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose",
+    "worker-threads",
+    "rest-api",
+    "pm2",
+    "backend",
+    "javascript"
+  ],
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "pm2:start": "pm2 start src/server.js --name insurance-assessment",
+    "pm2:restart": "pm2 restart insurance-assessment",
+    "pm2:stop": "pm2 stop insurance-assessment",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0",
+    "multer": "^2.0.2",
+    "node-cron": "^4.2.1",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "pm2": "^7.0.4",
+    "prettier": "^3.9.9"
+  },
+  "overrides": {
+    "js-yaml": "^4.3.2"
+  }
+}
